@@ -1,7 +1,7 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<html>
-<body>
+<%@taglib tagdir="/WEB-INF/tags/template" prefix="template" %>
+<template:admin>
 	<h2>Cadastrando Carros!</h2>
 
 	<form:form role="form" cssClass="well" commandName="carro"
@@ -44,5 +44,4 @@
 		</div>
 		<button type="submit" class="btn btn-primary">Cadastrar</button>
 	</form:form>
-</body>
-</html>
+</template:admin>

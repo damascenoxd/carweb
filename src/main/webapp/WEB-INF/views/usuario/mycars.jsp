@@ -1,7 +1,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib tagdir="/WEB-INF/tags/template" prefix="template" %>
 <template:admin>
-	<h2>Listando Carros</h2>
+	<h2>Meus Carros</h2>
 	<table
 		class="table table-condensed table-bordered table-striped table-hover">
 		<thead>
@@ -12,11 +12,10 @@
 				<td>Ano</td>
 				<td>Acessórios</td>
 				<td>Valor</td>
-				<td>Usuário</td>
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach items='${findAll}' var='object'>
+			<c:forEach items='${findByUsuario}' var='object'>
 				<tr>
 					<td>${object.id}</td>
 					<td>${object.fabricante}</td>
@@ -24,7 +23,6 @@
 					<td>${object.ano}</td>
 					<td>${object.acessorio}</td>
 					<td>${object.valor}</td>
-					<td>${object.usuario.nome}</td>
 				</tr>
 			</c:forEach>
 		</tbody>

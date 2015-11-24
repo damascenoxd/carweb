@@ -11,39 +11,41 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import br.unipe.carweb.models.Carro;
 import br.unipe.carweb.models.Usuario;
 import br.unipe.carweb.repositories.CarroRepository;
+import br.unipe.carweb.repositories.UsuarioRepository;
 
 @Controller
-@RequestMapping("/carro")
+@RequestMapping("/usuario")
 @Transactional
-public class CarroController {
+public class UsuarioController {
+
+	@Autowired
+	private UsuarioRepository usuariorp;
 
 	@Autowired
 	private CarroRepository carrorp;
 
 	@RequestMapping("/form")
-	public ModelAndView form(Carro carro) {
-		ModelAndView modelAndView = new ModelAndView("carro/form");
+	public ModelAndView form(Usuario usuario) {
+		ModelAndView modelAndView = new ModelAndView("usuario/form");
 		return modelAndView;
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public ModelAndView save(@Valid Carro carro, BindingResult bindingResult,HttpSession request) {
+	public ModelAndView save(@Valid Usuario usuario, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
-			return form(carro);
+			return form(usuario);
 		}
-		Usuario usuario = (Usuario) request.getAttribute("usuario");
-		carro.setUsuario(usuario);
-		carrorp.save(carro);
-		return new ModelAndView("redirect:/carro");
+		usuariorp.save(usuario);
+		return new ModelAndView("redirect:/");
 	}
 
-	@RequestMapping(method = RequestMethod.GET)
-	public ModelAndView list() {
-		ModelAndView modelAndView = new ModelAndView("carro/list");
-		modelAndView.addObject("findAll", carrorp.findAll());
+	@RequestMapping(method = RequestMethod.GET, value = "/mycars")
+	public ModelAndView list(HttpSession request) {
+		Usuario usuario = (Usuario) request.getAttribute("usuario");
+		ModelAndView modelAndView = new ModelAndView("usuario/mycars");
+		modelAndView.addObject("findByUsuario", carrorp.findByUsuario(usuario));
 		return modelAndView;
 	}
 }

@@ -3,6 +3,7 @@ package br.unipe.carweb.models;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Carro {
@@ -15,6 +16,9 @@ public class Carro {
 	private String modelo;
 	private int ano;
 	private String acessorio;
+
+	@ManyToOne
+	private Usuario usuario;
 
 	public Long getId() {
 		return id;
@@ -62,6 +66,14 @@ public class Carro {
 
 	public void setAcessorio(String acessorio) {
 		this.acessorio = acessorio;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 }

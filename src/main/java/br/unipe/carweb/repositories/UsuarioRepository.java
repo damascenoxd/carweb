@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import br.unipe.carweb.models.Usuario;
 
-public interface UsuarioRespository extends CrudRepository<Usuario, Long>{
-
+public interface UsuarioRepository extends CrudRepository<Usuario, Long>{
+	public Usuario findByEmailAndSenha(String email, String senha);
 }

@@ -6,8 +6,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import br.unipe.carweb.interceptors.ControleAcessoInterceptor;
 
 @Configuration
 @EnableWebMvc
@@ -20,10 +23,9 @@ public class AppWebConfiguration extends WebMvcConfigurerAdapter {
 		configurer.enable();
 	}
 
-	// USADA PARA LOGIN
-	// public void addInterceptors(InterceptorRegistry registry) {
-	// registry.addInterceptor(new ControleAcessoInterceptor());
-	// };
+	 public void addInterceptors(InterceptorRegistry registry) {
+	 registry.addInterceptor(new ControleAcessoInterceptor());
+	 };
 
 	@Bean
 	public InternalResourceViewResolver internalResourceViewResolver() {
