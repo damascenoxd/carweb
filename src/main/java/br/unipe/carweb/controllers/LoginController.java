@@ -34,8 +34,8 @@ public class LoginController {
         if(usuarioAutenticado != null){
             session.setAttribute("usuario", usuarioAutenticado);
         }else{
-        	modelMap.addAttribute("m", "usuario nao existe");
-            return "redirect:/login";
+        	session.setAttribute("m", "Amiguinho seu usuário é inválido! <br>Tente novamente.");
+        	return "redirect:/login";
         }
         return "redirect:/usuario/mycars";
     }

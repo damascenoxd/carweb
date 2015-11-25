@@ -12,6 +12,7 @@
 				<td>Ano</td>
 				<td>Acessórios</td>
 				<td>Valor</td>
+				<td>Ações</td>
 			</tr>
 		</thead>
 		<tbody>
@@ -23,6 +24,9 @@
 					<td>${object.ano}</td>
 					<td>${object.acessorio}</td>
 					<td>${object.valor}</td>
+					<td>
+					<a href="<c:url value='/carro'/>/${object.id}" class="btn btn-info">Editar</a>
+					<a href="<c:url value='/carro/remove'/>/${object.id}" class="btn btn-danger">Remover</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Listing</title>
 
-<!-- bootstrap -->
+<!-- bootstrap FFDB58-->
 <link rel="stylesheet"
 	href="<c:url value='/assets/css/bootstrap.min.css'/>">
 <link rel="stylesheet"
@@ -48,10 +48,19 @@
 							style="font-size: 16px;" class="pull-right hidden-xs showopacity"></span></a></li>
 					<li><a href="<c:url value='/usuario/mycars'/>">Meus Anúncios<span
 							style="font-size: 16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+					
+					<c:choose>
+					<c:when test="${m == null}">				
 					<li><a href="<c:url value='/usuario/form'/>">Cadastre-se<span
 							style="font-size: 16px;" class="pull-right hidden-xs showopacity"></span></a></li>
 					<li><a href="<c:url value='/login'/>">Entrar<span
 							style="font-size: 16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+					</c:when>
+					<c:otherwise>
+            			<li><a href="<c:url value='/login/logout'/>">Sair<span
+							style="font-size: 16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+					</c:otherwise>
+					</c:choose>
 				</ul>
 			</div>
 		</div>

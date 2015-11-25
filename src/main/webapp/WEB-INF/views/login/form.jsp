@@ -2,7 +2,6 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib tagdir="/WEB-INF/tags/template" prefix="template" %>
 <template:admin>
-
 <div class="col-xs-3 col-md-offset-4" >
 <form:form class="form-signin" modelAttribute="usuario" method="post" servletRelativeAction="/login/autenticar">
     <h5 class="form-signin-heading">Login</h5>
@@ -11,12 +10,13 @@
     <h5 class="form-signin-heading">Senha</h5>
     <label class="sr-only">Senha</label>
     <form:password path="senha" cssClass="form-control" placeholder="Senha"></form:password>
-    	
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+    <br>	
+    <button class="btn btn-lg btn-primary btn-block" type="submit" >Entrar</button>
+   <br>
 </form:form>
-<c:if test="${m != null}">
+ <c:if test="${m !=null}">
     <div class="alert alert-danger">
-            <h2>LOGA</h2>
+            <label>${m}</label>
     </div>
 </c:if>
 </div>

@@ -42,10 +42,11 @@ public class UsuarioController {
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/mycars")
-	public ModelAndView list(HttpSession request) {
+	public ModelAndView listCarByUsuario(HttpSession request) {
 		Usuario usuario = (Usuario) request.getAttribute("usuario");
 		ModelAndView modelAndView = new ModelAndView("usuario/mycars");
 		modelAndView.addObject("findByUsuario", carrorp.findByUsuario(usuario));
 		return modelAndView;
 	}
+
 }
