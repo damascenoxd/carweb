@@ -10,21 +10,21 @@
 		<div class="form-group">
 			<label for="nome">Nome</label>
 			<div class="input-group">
-				<form:input path='nome' type='text' />
+				<form:input path='nome' type='text' cssClass="form-control" placeholder="Nome"/>
 				<form:errors path='nome' />
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="email">E-mail</label>
 			<div class="input-group">
-				<form:input path='email' type='text' />
+				<form:input path='email' type='text' cssClass="form-control" placeholder="email@dominio"/>
 				<form:errors path='email' />
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="senha">Senha</label>
 			<div class="input-group">
-				<form:input path='senha' type='password' />
+				<form:input path='senha' type='password' cssClass="form-control" placeholder="Senha"/>
 				<form:errors path='senha' />
 			</div>
 		</div>

@@ -3,26 +3,29 @@
 <%@taglib tagdir="/WEB-INF/tags/template" prefix="template"%>
 <template:admin>
 	<h2>Listando Carros</h2>
-	<div class="form-inline col-md-8">
+	<div class="form-inline col-md-12">
 		<form:form role="form" commandName="carro"
 			servletRelativeAction="/carro/filtrar" method="POST">
-			<div class="form-group col-md-5">
+			<div class="form-group col-md-4">
 					<label for="modelo">Modelo</label>
 					<div class="input-group">
-						<form:input path='modelo' type='text' />
+						<form:input path='modelo' type='text' cssClass="form-control" placeholder="Modelo"/>
 						<form:errors path='modelo' />
 				</div>
 			</div>
-			<div class="form-group col-md-5">
+			<div class="form-group col-md-4">
 					<label for="valor">Valor menor que:</label>
 					<div class="input-group">
-						<form:input path='valor' type='text' />
+						<form:input path='valor' type='text' cssClass="form-control" placeholder="Valor" />
 						<form:errors path='valor' />
 				</div>
 			</div>
-			<button type="submit" class="btn btn-primary btn-xs">Buscar</button>
+			<div class="form-group col-md-4">
+			<button type="submit" class="btn btn-primary">Buscar</button>
+			</div>
 		</form:form>
 	</div>
+	
 	<table
 		class="table table-condensed table-bordered table-striped table-hover">
 		<thead>

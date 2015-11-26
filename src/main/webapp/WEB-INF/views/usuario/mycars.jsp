@@ -25,8 +25,8 @@
 					<td>${object.acessorio}</td>
 					<td>${object.valor}</td>
 					<td>
-					<a href="<c:url value='/carro'/>/${object.id}" class="btn btn-info">Editar</a>
-					<a href="<c:url value='/carro/remove'/>/${object.id}" class="btn btn-danger">Remover</a></td>
+					<a href="<c:url value='/carro'/>/${object.id}" class="btn btn-info btn-sm">Editar</a>
+					<a href="<c:url value='/carro/remove'/>/${object.id}" class="btn btn-danger btn-sm">Remover</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

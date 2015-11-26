@@ -26,7 +26,7 @@
 
 	<!-- INICIO NAV (alterar pra include)-->
 
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
 
@@ -83,7 +83,7 @@
 						alt="Twitter" height="25" width="25" hspace="10"></a></span> <span
 					style="font-size: 25px;" class="pull-right hidden-xs showopacity">
 					<a href="https://plus.google.com/"><img
-						src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTbqvxR8E9zu7bClbdIRC70hI73A7o6xJOzR9p9NK_MzvX5z7JwTQ"
+						src="https://lh3.googleusercontent.com/N-AY2XwXafWq4TQWfua6VyjPVQvTGRdz9CKOHaBl2nu2GVg7zxS886X5giZ9yY2qIjPh=w300"
 						alt="Twitter" height="25" width="25" hspace="10"></a>
 				</span>
 			</div>
