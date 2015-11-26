@@ -3,7 +3,7 @@
 <%@taglib tagdir="/WEB-INF/tags/template" prefix="template"%>
 <template:admin>
 	<h2>Listando Carros</h2>
-	<div class="form-inline col-md-6">
+	<div class="form-inline col-md-8">
 		<form:form role="form" commandName="carro"
 			servletRelativeAction="/carro/filtrar" method="POST">
 			<div class="form-group col-md-5">
@@ -14,7 +14,7 @@
 				</div>
 			</div>
 			<div class="form-group col-md-5">
-					<label for="valor">Valor</label>
+					<label for="valor">Valor menor que:</label>
 					<div class="input-group">
 						<form:input path='valor' type='text' />
 						<form:errors path='valor' />

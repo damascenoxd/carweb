@@ -34,7 +34,7 @@ public class LoginController {
         if(usuarioAutenticado != null){
             session.setAttribute("usuario", usuarioAutenticado);
         }else{
-        	session.setAttribute("m", "Amiguinho seu usuário é inválido! <br>Tente novamente.");
+        	session.setAttribute("m", "Amiguinho seu usuário é inválido! <br>Tente denovo fofo *--*.");
         	return "redirect:/login";
         }
         return "redirect:/usuario/mycars";

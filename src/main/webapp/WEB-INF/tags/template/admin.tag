@@ -46,34 +46,59 @@
 							style="font-size: 16px;" class="pull-right hidden-xs showopacity"></span></a></li>
 					<li><a href="<c:url value='/carro'/>">Anúncios<span
 							style="font-size: 16px;" class="pull-right hidden-xs showopacity"></span></a></li>
-					<li><a href="<c:url value='/usuario/mycars'/>">Meus Anúncios<span
-							style="font-size: 16px;" class="pull-right hidden-xs showopacity"></span></a></li>
-					
+					<li><a href="<c:url value='/usuario/mycars'/>">Meus
+							Anúncios<span style="font-size: 16px;"
+							class="pull-right hidden-xs showopacity"></span>
+					</a></li>
+
 					<c:choose>
-					<c:when test="${m == null}">				
-					<li><a href="<c:url value='/usuario/form'/>">Cadastre-se<span
-							style="font-size: 16px;" class="pull-right hidden-xs showopacity"></span></a></li>
-					<li><a href="<c:url value='/login'/>">Entrar<span
-							style="font-size: 16px;" class="pull-right hidden-xs showopacity"></span></a></li>
-					</c:when>
-					<c:otherwise>
-            			<li><a href="<c:url value='/login/logout'/>">Sair<span
-							style="font-size: 16px;" class="pull-right hidden-xs showopacity"></span></a></li>
-					</c:otherwise>
+						<c:when test="${m == null}">
+							<li><a href="<c:url value='/usuario/form'/>">Cadastre-se<span
+									style="font-size: 16px;"
+									class="pull-right hidden-xs showopacity"></span></a></li>
+							<li><a href="<c:url value='/login'/>">Entrar<span
+									style="font-size: 16px;"
+									class="pull-right hidden-xs showopacity"></span></a></li>
+						</c:when>
+						<c:otherwise>
+							<li><a href="<c:url value='/login/logout'/>">Sair<span
+									style="font-size: 16px;"
+									class="pull-right hidden-xs showopacity"></span></a></li>
+						</c:otherwise>
 					</c:choose>
 				</ul>
+				<span style="font-size: 25px;"
+					class="pull-right hidden-xs showopacity"> <a
+					href="http://www.facebook.com"><img
+						src="http://www.usu.br/arquivos_img/site/facebook.png"
+						alt="Facebook" height="25" width="25" hspace="10"></a></span> <span
+					style="font-size: 25px;" class="pull-right hidden-xs showopacity">
+					<a href="https://www.instagram.com/"><img
+						src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Instagram-128.png"
+						alt="Instagram" height="25" width="25" hspace="10"></a>
+				</span> <span style="font-size: 25px;"
+					class="pull-right hidden-xs showopacity"> <a
+					href="https://twitter.com/"><img
+						src="http://vignette4.wikia.nocookie.net/phoebe-and-her-unicorn/images/1/11/Twitter_bird_icon.png/revision/latest?cb=20150530044104"
+						alt="Twitter" height="25" width="25" hspace="10"></a></span> <span
+					style="font-size: 25px;" class="pull-right hidden-xs showopacity">
+					<a href="https://plus.google.com/"><img
+						src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTbqvxR8E9zu7bClbdIRC70hI73A7o6xJOzR9p9NK_MzvX5z7JwTQ"
+						alt="Twitter" height="25" width="25" hspace="10"></a>
+				</span>
 			</div>
-		</div>
-	</nav>
 
+		</div>
+
+	</nav>
 	<!-- FINAL NAV -->
 	<jsp:doBody />
 
 	<script src="<c:url value='/assets/js/jquery-2.1.4.min.js'/>"></script>
 	<script src="<c:url value='/assets/js/bootstrap.min.js'/>"></script>
 	<script src="<c:url value='/assets/js/menu.js'/>"></script>
-		
+
 	<jsp:invoke fragment="extraScripts" />
-	
+
 </body>
 </html>

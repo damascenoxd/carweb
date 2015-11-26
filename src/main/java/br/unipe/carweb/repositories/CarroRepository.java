@@ -12,9 +12,8 @@ public interface CarroRepository extends CrudRepository<Carro, Long> {
 
 	public ArrayList<Carro> findByModeloContainingIgnoreCase(String modelo);
 
-	public ArrayList<Carro> findByValorLessThan(Double valor);
+	public ArrayList<Carro> findByValorLessThan(Double valor); 
+	
+	public ArrayList<Carro> findByModeloContainingIgnoreCaseAndValorLessThan(String modelo, Double valor);
 
-	public ArrayList<Carro> findByValorGreaterThan(Double valor);
-
-	public ArrayList<Carro> findByValorBetween(Double valor1, Double valor2);
 }

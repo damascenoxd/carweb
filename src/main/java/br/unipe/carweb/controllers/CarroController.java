@@ -55,12 +55,27 @@ public class CarroController {
 	
 	//EM ANDAMENTO
 	@RequestMapping(method = RequestMethod.POST , value = "/filtrar")
-	public ModelAndView listFiltrado(@ModelAttribute Carro carro, BindingResult result, ModelMap modelMap){
-		String modelo = carro.getModelo();
-		System.out.println("asd");
+	public ModelAndView listFiltrado(@ModelAttribute Carro carro, ModelMap modelMap){
 		ModelAndView modelAndView = new ModelAndView("carro/list");
-		modelAndView.addObject("findAll", carrorp.findByModeloContainingIgnoreCase(modelo));
-		return modelAndView;
+		String modelo = carro.getModelo();
+		double valor = carro.getValor();
+		if (modelo != null && valor == 0) {
+			modelAndView.addObject("findAll", carrorp.findByModeloContainingIgnoreCase(modelo));
+			return modelAndView;
+		}
+		if (modelo == null && valor!= 0) {
+			modelAndView.addObject("findAll", carrorp.findByValorLessThan(valor));
+			return modelAndView;
+		}
+		if (modelo != null && valor != 0) {
+			modelAndView.addObject("findAll", carrorp.findByModeloContainingIgnoreCaseAndValorLessThan(modelo,valor));
+			return modelAndView;
+		}
+		if (modelo == null && valor == 0) {
+			modelAndView.addObject("findAll", carrorp.findAll());
+			return modelAndView;
+		}
+		return new ModelAndView("redirect:/carro/list");
 	}
 	
 
