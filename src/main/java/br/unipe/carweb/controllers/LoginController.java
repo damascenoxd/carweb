@@ -33,6 +33,7 @@ public class LoginController {
         Usuario usuarioAutenticado = usuariorp.findByEmailAndSenha(usuario.getEmail(), usuario.getSenha());
         if(usuarioAutenticado != null){
             session.setAttribute("usuario", usuarioAutenticado);
+            session.setAttribute("m", "Bem vindo!");
         }else{
         	session.setAttribute("m", "Amiguinho seu usuário é inválido! <br>Tente denovo fofo *--*.");
         	return "redirect:/login";

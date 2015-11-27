@@ -9,35 +9,35 @@
 				<div class="form-group">
 					<label for="fabricante">Fabricante</label>
 					<div class="input-group">
-						<form:input path='fabricante' type='text' />
+						<form:input path='fabricante' type='text' cssClass="form-control" placeholder="Fabricante" />
 						<form:errors path='fabricante' />
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="modelo">Modelo</label>
 					<div class="input-group">
-						<form:input path='modelo' type='text' />
+						<form:input path='modelo' type='text' cssClass="form-control" placeholder="Modelo" />
 						<form:errors path='modelo' />
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="ano">Ano</label>
 					<div class="input-group">
-						<form:input path='ano' type='text' />
+						<form:input path='ano' type='text' cssClass="form-control" placeholder="Ano"/>
 						<form:errors path='ano' />
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="acessorio">Acessórios</label>
 					<div class="input-group">
-						<form:input path='acessorio' type='text' />
+						<form:input path='acessorio' type='text' cssClass="form-control" placeholder="Acessórios"/>
 						<form:errors path='acessorio' />
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="valor">Valor</label>
 					<div class="input-group">
-						<form:input path='valor' type='text' />
+						<form:input path='valor' type='text' cssClass="form-control" placeholder="Valor"/>
 						<form:errors path='valor' />
 					</div>
 				</div>
