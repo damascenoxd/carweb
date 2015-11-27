@@ -16,9 +16,20 @@ public class Carro {
 	private String modelo;
 	private int ano;
 	private String acessorio;
+	
+	// private ArrayList<Acessorio> acessorios;
 
 	@ManyToOne
 	private Usuario usuario;
+
+	
+//	public ArrayList<Acessorio> getAcessorios() {
+//		return acessorios;
+//	}
+//
+//	public void setAcessorios(ArrayList<Acessorio> acessorios) {
+//		this.acessorios = acessorios;
+//	}
 
 	public Long getId() {
 		return id;

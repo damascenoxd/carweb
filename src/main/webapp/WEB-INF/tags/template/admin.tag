@@ -52,16 +52,16 @@
 					</a></li>
 
 					<c:choose>
-						<c:when test="${m == null}">
-							<li><a href="<c:url value='/usuario/form'/>">Cadastre-se<span
-									style="font-size: 16px;"
-									class="pull-right hidden-xs showopacity"></span></a></li>
-							<li><a href="<c:url value='/login'/>">Entrar<span
+						<c:when test="${a != null}">
+							<li><a href="<c:url value='/login/logout'/>">Sair<span
 									style="font-size: 16px;"
 									class="pull-right hidden-xs showopacity"></span></a></li>
 						</c:when>
 						<c:otherwise>
-							<li><a href="<c:url value='/login/logout'/>">Sair<span
+							<li><a href="<c:url value='/usuario/form'/>">Cadastre-se<span
+									style="font-size: 16px;"
+									class="pull-right hidden-xs showopacity"></span></a></li>
+							<li><a href="<c:url value='/login'/>">Entrar<span
 									style="font-size: 16px;"
 									class="pull-right hidden-xs showopacity"></span></a></li>
 						</c:otherwise>
